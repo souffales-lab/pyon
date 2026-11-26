@@ -26,10 +26,12 @@
 }
         }
         .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+          width: 100%; /* Penting agar tidak menyusut saat di dalam flex */
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 40px 20px;
+          box-sizing: border-box;
+       }
         /* --- NAVIGATION SYSTEM --- */
         .page { display: none; }
         .page.active { display: block; }
