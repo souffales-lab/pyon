@@ -15,7 +15,6 @@
             --text-light: #8D6E63;    
             --white: #FFFFFF;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-body);
@@ -23,20 +22,16 @@
             margin: 0;
             padding: 0;
         }
-
         .container {
             max-width: 600px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-
         /* --- NAVIGATION SYSTEM --- */
         .page { display: none; }
         .page.active { display: block; }
-
         /* --- LANDING PAGE STYLES --- */
         .profile-area { text-align: center; margin-bottom: 40px; }
-        
         .avatar { 
             width: 100px; 
             height: 100px; 
@@ -58,7 +53,6 @@
         .avatar-placeholder {
             font-size: 30px;
         }
-        
         .nav-button {
             display: block;
             width: 100%;
@@ -80,52 +74,42 @@
             transform: translateY(-3px);
             border-color: var(--white);
         }
-
         /* --- FORM STYLES --- */
         .card { background: var(--bg-card); border-radius: 20px; padding: 25px; margin-bottom: 25px; }
         .category-title { font-size: 1.4em; font-weight: bold; color: var(--primary-hover); margin-top: 30px; margin-bottom: 15px; padding-bottom: 5px; border-bottom: 2px dashed var(--primary); }
-        
         .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
         .form-group label { display: block; font-size: 0.85em; font-weight: bold; margin-bottom: 8px; color: var(--primary-hover); }
         .form-group input { width: 100%; padding: 12px; border-radius: 10px; border: none; outline: none; box-sizing: border-box; font-family: inherit; color: var(--text-dark); }
-
         /* Styles tambahan untuk input select dan checkbox form */
         .form-group select { width: 100%; padding: 12px; border-radius: 10px; border: none; outline: none; box-sizing: border-box; font-family: inherit; color: var(--text-dark); background: var(--white); font-weight: 500; }
         .option-desc { font-size: 0.78em; color: var(--text-light); line-height: 1.4; margin: 6px 0 0 0; }
         .checkbox-container { display: flex; align-items: center; gap: 10px; cursor: pointer; font-weight: bold; font-size: 0.95em; }
         .checkbox-container input { width: 18px; height: 18px; cursor: pointer; accent-color: var(--primary-hover); }
-
         /* --- PRODUCT GRID & CONTAINER --- */
         .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; align-items: start; }
         .product-item { background: var(--white); border-radius: 15px; padding: 12px; border: 3px solid transparent; transition: 0.3s; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
         .product-item.selected { border-color: var(--primary-hover); background: #F9F1E7; }
-        
         .product-preview-img { width: 100%; border-radius: 10px; background: #fffcf4; margin-bottom: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(160, 120, 85, 0.1); }
         .product-preview-img img { width: 100%; height: auto; display: block; object-fit: contain; }
         .no-img-placeholder { font-size: 0.75em; color: var(--text-light); text-align: center; padding: 20px; font-style: italic; }
-
         .product-name { font-weight: bold; font-size: 0.95em; margin-bottom: 3px; }
         .product-price { color: var(--primary-hover); font-weight: bold; font-size: 0.85em; margin-bottom: 8px; }
         .product-desc { font-size: 0.75em; color: var(--text-light); line-height: 1.4; margin-bottom: 15px; white-space: pre-line; }
-
         /* --- COUNTER SYSTEM (+/-) --- */
         .counter-wrapper { display: flex; align-items: center; justify-content: space-between; background: var(--bg-body); border-radius: 8px; padding: 4px; border: 1px solid rgba(160, 120, 85, 0.2); margin-top: auto; }
         .btn-counter { background: var(--primary); color: var(--text-dark); border: none; width: 28px; height: 28px; border-radius: 6px; font-weight: bold; font-size: 1.1em; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.2s; }
         .btn-counter:hover { background: var(--primary-hover); color: white; }
         .counter-value { font-weight: bold; font-size: 0.9em; min-width: 20px; text-align: center; }
-
         /* --- COMING SOON AREA --- */
         .coming-soon { text-align: center; padding: 60px 20px; }
         .back-link { display: inline-block; margin-top: 10px; color: var(--primary-hover); font-weight: bold; cursor: pointer; text-decoration: none; }
         .back-link:hover { text-decoration: underline; }
-
         /* --- FLOATING BAR --- */
         .bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg-card); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 -4px 15px rgba(0,0,0,0.05); z-index: 50; box-sizing: border-box; }
         .bottom-container { max-width: 600px; margin: 0 auto; width: 100%; display: flex; justify-content: space-between; align-items: center; }
         .btn-checkout { background: var(--primary-hover); color: white; border: none; padding: 12px 24px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: 0.3s; }
         .btn-checkout:disabled { background: #d3c3b4; cursor: not-allowed; }
         .btn-checkout:not(:disabled):hover { background: var(--text-dark); }
-
         /* --- MODAL STRUK --- */
         .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); align-items: center; justify-content: center; backdrop-filter: blur(3px); padding: 20px; box-sizing: border-box; }
         .modal-content { background: var(--bg-body); border-radius: 20px; width: 100%; max-width: 450px; padding: 20px; position: relative; max-height: 90vh; overflow-y: auto; box-sizing: border-box; }
@@ -134,14 +118,12 @@
         .r-row span:first-child { color: var(--text-light); }
         .r-row span:last-child { font-weight: bold; color: var(--text-dark); }
         .r-total-box { background: var(--primary-hover); color: white; padding: 15px; border-radius: 12px; text-align: center; font-weight: bold; margin-top: 20px; font-size: 1.1em; display: flex; justify-content: space-between; }
-        
         /* Style Informasi Kontak di Struk */
         .r-contact-info { margin-top: 20px; padding: 12px; background: #FFFDF9; border: 1px dashed var(--primary); border-radius: 10px; font-size: 0.85em; color: var(--text-dark); }
         .r-contact-info p { margin: 0 0 6px 0; font-weight: bold; color: var(--primary-hover); }
         .r-contact-info ul { margin: 0; padding-left: 15px; list-style-type: disc; color: var(--text-light); }
         .r-contact-info li { margin-bottom: 3px; font-weight: 500; }
         .r-contact-info li span { color: var(--text-dark); font-weight: 600; }
-
         @media (max-width: 500px) {
             .info-grid { grid-template-columns: 1fr; }
             .product-grid { grid-template-columns: 1fr; }
@@ -151,7 +133,6 @@
 <body>
 
 <div class="container">
-
     <div id="pageLanding" class="page active">
         <div class="profile-area">
             <div class="avatar">
@@ -161,14 +142,12 @@
             <h2 style="color: var(--primary-hover); margin-bottom: 5px;">Souffales ✨</h2>
             <p style="color: var(--text-light); font-size: 0.9em; margin-top: 0; letter-spacing: 0.3px;">Illustrator | Chibi Art & Merch Design</p>
         </div>
-
         <a href="https://shopee.co.id/souffales" target="_blank" class="nav-button">🍊 Shopee</a>
         <a href="https://vt.tiktok.com/ZSQCLJXuq/?page=Mall" target="_blank" class="nav-button">⭐ Tiktok Shop</a>
         <a href="https://drive.google.com/file/d/1r4xhUaj-fcyCT4PRCeticN1gUGbWqjD4/view?usp=drive_link" target="_blank" class="nav-button">🍳 Brand Profile</a>
         <div onclick="showPage('pagePreOrder')" class="nav-button">📦 Pre-Order Merch</div>
         <div onclick="showPage('pageCommission')" class="nav-button">🎨 Order Commission</div>
     </div>
-
     <div id="pagePreOrder" class="page">
         <div class="coming-soon">
             <h1 style="font-size: 3em; margin: 0;">⭐</h1>
@@ -177,15 +156,12 @@
             <span class="back-link" onclick="showPage('pageLanding')">← Back to Main Page</span>
         </div>
     </div>
-
     <div id="pageCommission" class="page">
-        <span class="back-link" onclick="showPage('pageLanding')" style="margin-bottom: 25px;">← Back</span>
-        
+        <span class="back-link" onclick="showPage('pageLanding')" style="margin-bottom: 25px;">← Back</span>  
         <div class="header" style="margin-bottom: 25px;">
             <h2 style="color: var(--primary-hover); margin-bottom: 5px;">Commission Form</h2>
             <p style="font-size: 0.9em; color: var(--text-light); margin-top: 0;">Please fill in your info and select your commission category!</p>
         </div>
-
         <div class="card">
             <div class="info-grid">
                 <div class="form-group">
@@ -198,10 +174,8 @@
                 </div>
             </div>
         </div>
-
         <div class="category-title">Ych</div>
         <div class="product-grid">
-            
             <div class="product-item" id="item-kotsouna" data-price-idr="95000" data-price-usd="20" data-name="YCH - Kotsouna">
                 <div class="product-preview-img">
                     <img src="kotsouna.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -220,7 +194,6 @@ Let’s transform your character into a tiny plushie friend today! 🧸💖</div
                     <button class="btn-counter" onclick="changeQty('item-kotsouna', 1)">+</button>
                 </div>
             </div>
-
             <div class="product-item" id="item-yochien" data-price-idr="70000" data-price-usd="17" data-name="YCH - Yochien">
                 <div class="product-preview-img">
                     <img src="yochien.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -239,7 +212,6 @@ Let's get them ready for their first day of cuteness overload! 🍼🎒💖</div
                     <button class="btn-counter" onclick="changeQty('item-yochien', 1)">+</button>
                 </div>
             </div>
-
             <div class="product-item" id="item-cimit" data-price-idr="95000" data-price-usd="20" data-name="YCH - Cimit">
                 <div class="product-preview-img">
                     <img src="cimit.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -258,7 +230,6 @@ The ultimate level of pocket-sized chibi that brings joy for you! 🌟</div>
                     <button class="btn-counter" onclick="changeQty('item-cimit', 1)">+</button>
                 </div>
             </div>
-
             <div class="product-item" id="item-ebifurai" data-price-idr="65000" data-price-usd="15" data-name="YCH - Ebi Furai">
                 <div class="product-preview-img">
                     <img src="ebi%20furai.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -277,12 +248,9 @@ Super yummy crunchy tiny tempura! The ultimate choice for quirky chibi! ✨</div
                     <button class="btn-counter" onclick="changeQty('item-ebifurai', 1)">+</button>
                 </div>
             </div>
-
         </div>
-
         <div class="category-title">Logo Commission</div>
         <div class="product-grid" style="grid-template-columns: 1fr;">
-            
             <div class="product-item" id="item-logo" data-price-idr="250000" data-price-usd="30" data-name="Logo Commission">
                 <div class="product-preview-img">
                     <img src="logo commission.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -301,9 +269,7 @@ This bespoke design service transforms concept into iconic and perfect logo 🌟
                     <button class="btn-counter" onclick="changeQty('item-logo', 1)">+</button>
                 </div>
             </div>
-
         </div>
-
         <div class="category-title">Options</div>
         <div class="card" style="margin-bottom: 15px;">
             <div class="form-group">
@@ -316,7 +282,6 @@ This bespoke design service transforms concept into iconic and perfect logo 🌟
                 </p>
             </div>
         </div>
-
         <div class="card">
             <div class="form-group">
                 <label>Turn into merchandise! (for local only)</label>
@@ -331,12 +296,9 @@ This bespoke design service transforms concept into iconic and perfect logo 🌟
                 </p>
             </div>
         </div>
-
         <div style="height: 100px;"></div>
     </div>
-
 </div>
-
 <div id="commissionBar" class="bottom-bar" style="display: none;">
     <div class="bottom-container">
         <div>
@@ -353,19 +315,15 @@ This bespoke design service transforms concept into iconic and perfect logo 🌟
             <h2 style="text-align: center; color: var(--primary-hover); margin: 0;">Receipt ✨</h2>
             <p style="text-align: center; font-size: 0.8em; margin: 5px 0 20px; color: var(--text-light);">Order Confirmation Receipt</p>
             <hr style="border: none; border-top: 3px dashed var(--primary); margin-bottom: 15px;">
-            
             <div class="r-row"><span>Name:</span> <span id="rName"></span></div>
             <div class="r-row"><span>Contact:</span> <span id="rContact"></span></div>
             <hr style="border: none; border-top: 1px solid #eee; margin: 15px 0;">
-            
             <div style="font-size: 0.85em; font-weight: bold; color: var(--primary-hover); margin-bottom: 10px;">ORDER LIST:</div>
             <div id="rItems"></div>
-            
             <div class="r-total-box">
                 <span>TOTAL:</span>
                 <span id="rTotal">Rp 0 / $0</span>
             </div>
-
             <div class="r-contact-info">
                 <p>Contact me on</p>
                 <ul>
@@ -374,9 +332,7 @@ This bespoke design service transforms concept into iconic and perfect logo 🌟
                     <li>WhatsApp: <span>+62 851-7996-8670</span></li>
                 </ul>
             </div>
-
             <p style="font-size: 0.75em; text-align: center; margin-top: 20px; color: var(--text-light); font-weight: 600;">Please save this image & send it via DM to submit your order! ✨
-                
             @souffales </p>
         </div>
         <button class="btn-checkout" onclick="downloadReceipt()" style="width: 100%; margin-top: 15px;">📸 Save as Image</button>
