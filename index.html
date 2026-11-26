@@ -82,60 +82,7 @@
             transform: translateY(-3px);
             border-color: var(--white);
         }
-        /* --- FORM STYLES --- */
-        .card { background: var(--bg-card); border-radius: 20px; padding: 25px; margin-bottom: 25px; }
-        .category-title { font-size: 1.4em; font-weight: bold; color: var(--primary-hover); margin-top: 30px; margin-bottom: 15px; padding-bottom: 5px; border-bottom: 2px dashed var(--primary); }
-        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .form-group label { display: block; font-size: 0.85em; font-weight: bold; margin-bottom: 8px; color: var(--primary-hover); }
-        .form-group input { width: 100%; padding: 12px; border-radius: 10px; border: none; outline: none; box-sizing: border-box; font-family: inherit; color: var(--text-dark); }
-        /* Styles tambahan untuk input select dan checkbox form */
-        .form-group select { width: 100%; padding: 12px; border-radius: 10px; border: none; outline: none; box-sizing: border-box; font-family: inherit; color: var(--text-dark); background: var(--white); font-weight: 500; }
-        .option-desc { font-size: 0.78em; color: var(--text-light); line-height: 1.4; margin: 6px 0 0 0; }
-        .checkbox-container { display: flex; align-items: center; gap: 10px; cursor: pointer; font-weight: bold; font-size: 0.95em; }
-        .checkbox-container input { width: 18px; height: 18px; cursor: pointer; accent-color: var(--primary-hover); }
-        /* --- PRODUCT GRID & CONTAINER --- */
-        .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; align-items: start; }
-        .product-item { background: var(--white); border-radius: 15px; padding: 12px; border: 3px solid transparent; transition: 0.3s; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
-        .product-item.selected { border-color: var(--primary-hover); background: #F9F1E7; }
-        .product-preview-img { width: 100%; border-radius: 10px; background: #fffcf4; margin-bottom: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(160, 120, 85, 0.1); }
-        .product-preview-img img { width: 100%; height: auto; display: block; object-fit: contain; }
-        .no-img-placeholder { font-size: 0.75em; color: var(--text-light); text-align: center; padding: 20px; font-style: italic; }
-        .product-name { font-weight: bold; font-size: 0.95em; margin-bottom: 3px; }
-        .product-price { color: var(--primary-hover); font-weight: bold; font-size: 0.85em; margin-bottom: 8px; }
-        .product-desc { font-size: 0.75em; color: var(--text-light); line-height: 1.4; margin-bottom: 15px; white-space: pre-line; }
-        /* --- COUNTER SYSTEM (+/-) --- */
-        .counter-wrapper { display: flex; align-items: center; justify-content: space-between; background: var(--bg-body); border-radius: 8px; padding: 4px; border: 1px solid rgba(160, 120, 85, 0.2); margin-top: auto; }
-        .btn-counter { background: var(--primary); color: var(--text-dark); border: none; width: 28px; height: 28px; border-radius: 6px; font-weight: bold; font-size: 1.1em; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.2s; }
-        .btn-counter:hover { background: var(--primary-hover); color: white; }
-        .counter-value { font-weight: bold; font-size: 0.9em; min-width: 20px; text-align: center; }
-        /* --- COMING SOON AREA --- */
-        .coming-soon { text-align: center; padding: 60px 20px; }
-        .back-link { display: inline-block; margin-top: 10px; color: var(--primary-hover); font-weight: bold; cursor: pointer; text-decoration: none; }
-        .back-link:hover { text-decoration: underline; }
-        /* --- FLOATING BAR --- */
-        .bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg-card); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 -4px 15px rgba(0,0,0,0.05); z-index: 50; box-sizing: border-box; }
-        .bottom-container { max-width: 600px; margin: 0 auto; width: 100%; display: flex; justify-content: space-between; align-items: center; }
-        .btn-checkout { background: var(--primary-hover); color: white; border: none; padding: 12px 24px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: 0.3s; }
-        .btn-checkout:disabled { background: #d3c3b4; cursor: not-allowed; }
-        .btn-checkout:not(:disabled):hover { background: var(--text-dark); }
-        /* --- MODAL STRUK --- */
-        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); align-items: center; justify-content: center; backdrop-filter: blur(3px); padding: 20px; box-sizing: border-box; }
-        .modal-content { background: var(--bg-body); border-radius: 20px; width: 100%; max-width: 450px; padding: 20px; position: relative; max-height: 90vh; overflow-y: auto; box-sizing: border-box; }
-        .receipt-container { padding: 10px; background: var(--bg-body); }
-        .r-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95em; align-items: center; }
-        .r-row span:first-child { color: var(--text-light); }
-        .r-row span:last-child { font-weight: bold; color: var(--text-dark); }
-        .r-total-box { background: var(--primary-hover); color: white; padding: 15px; border-radius: 12px; text-align: center; font-weight: bold; margin-top: 20px; font-size: 1.1em; display: flex; justify-content: space-between; }
-        /* Style Informasi Kontak di Struk */
-        .r-contact-info { margin-top: 20px; padding: 12px; background: #FFFDF9; border: 1px dashed var(--primary); border-radius: 10px; font-size: 0.85em; color: var(--text-dark); }
-        .r-contact-info p { margin: 0 0 6px 0; font-weight: bold; color: var(--primary-hover); }
-        .r-contact-info ul { margin: 0; padding-left: 15px; list-style-type: disc; color: var(--text-light); }
-        .r-contact-info li { margin-bottom: 3px; font-weight: 500; }
-        .r-contact-info li span { color: var(--text-dark); font-weight: 600; }
-        @media (max-width: 500px) {
-            .info-grid { grid-template-columns: 1fr; }
-            .product-grid { grid-template-columns: 1fr; }
-        }
+        
     </style>
 </head>
 <body>
